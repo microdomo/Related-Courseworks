@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <link href="layout.css" rel="stylesheet">
+</head>
+<body>
+  <div class="mt-n5 mb-n5 pb-0 jumbotron jumbotron-fluid bg-white">
+    <div class="container-fluid">
+    <!--Logo-->
+    <img class="img-responsive mt-n5" src="protecpass.png" alt="ProtecPass">
+    <!--Sign Up/Login button-->
+    <button type="button" class="btn float-right mt-5 sm-mt-0 mr-md-5 btn-primary">Sign up/Login</button>
+    </div>
+  </div>
+
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-sm navbar-light bg-warning py-0">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav navbar-fill w-100 justify-content-around">
+          <!--Home-->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <!--Subscriptions-->
+          <li class="nav-item">
+            <a class="nav-link" href="subscriptions.html">Subscriptions</a>
+          </li>
+          <!--Help-->
+          <li class="nav-item">
+            <a class="nav-link" href="#">Help</a>
+          </li>
+          <!--Contact Us-->
+          <li class="nav-item">
+            <a class="nav-link" href="contact_us.html">Contact us</a>
+          </li>
+        </ul>
+        </div>
+    </nav>
+
+  <div class="container">
+    <div class="row">
+    <div id="accordion" style = "width: 500px;">
+      <h1>FAQs</h1>
+      <!--FAQ Q1-->
+      <div class="card">
+        <div class="card-header">
+          <a class="card-link" data-toggle="collapse" href="#collapseOne">
+            What is a password manager?
+          </a>
+        </div>
+        <!--FAQ Q1 Answer-->
+        <div id="collapseOne" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            A password manager, just like its name, manages your password for you. It is a software application
+        that helps manage credentials online and in turn give you greater convenience online.
+          </div>
+        </div>
+      </div>
+      <!--FAQ Q2-->  
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+            Can Protec Pass see our passwords saved?
+          </a>
+        </div>
+        <!--FAQ Q2 Answer-->
+        <div id="collapseTwo" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            No. Protec Pass is designed such that your data are encrypted and decrypted on your own end. They can
+        only be access using a passsword that only you know about. Hence, Protec Pass will not be able to see your passwords.
+          </div>
+        </div>
+      </div>
+      <!--FAQ Q3-->
+      <div class="card">
+        <div class="card-header">
+          <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+            What is a password generator?
+          </a>
+        </div>
+        <!--FAQ Q3 Answer-->
+        <div id="collapseThree" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            A password generator helps generate random passwords for you. These passwords contains alphabets, numbers and special
+        characters which makes them stronger and safer.
+          </div>
+        </div>
+      </div>
+    <!--For more FAQ link-->
+    <a class="FAQ-link" href="#!">For more questions</a>
+    <br>
+    <br>
+    <!--Email + Contact Number-->
+    <h2>Information:</h2>
+    <p>Email: <a href="mailto:ProtecPass@example.com">ProtecPass@example.com</a></p>
+    <p>Contact Number: <a href="tel:+6591234567">+65 91234567</a></p>
+    </div>
+    <!--Submit request form-->
+    <div class = "submit">
+      <form>
+       <h1>Submit a request</h1>
+       <!--Input email-->
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <!--Input name-->
+        <div class="form-group">
+          <label for="uname">Name</label>
+          <input type="text" class="form-control" id="uname" placeholder="Enter Name" name="uname" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <!--Input description-->
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1">Description</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+      </form>
+      <!--Submit button-->
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+
+<!--Footer-->
+<footer class="pt-5 page-footer font-small indigo">
+  <!--Footer Links-->
+  <div class="container text-center text-md-left">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-md-2 mx-auto">
+        <!--Links-->
+        <h5 class="font-weight-bold mt-3 mb-4">ProtecPass</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="index.html">About Us</a>
+          </li>
+          <li>
+            <a href="features.html">Features</a>
+          </li>
+          <li>
+            <a href="subscriptions.html">Subscriptions</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+      <hr class="clearfix w-100 d-md-none">
+      <!--Grid column-->
+      <div class="col-md-2 mx-auto">
+        <!--Links-->
+        <h5 class="font-weight-bold mt-3 mb-4">Tools</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="tools.html">Username generator</a>
+          </li>
+          <li>
+            <a href="tools.html">Password generator</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+      <hr class="clearfix w-100 d-md-none">
+      <!--Grid column-->
+      <div class="col-md-2 mx-auto">
+        <!--Links-->
+        <h5 class="font-weight-bold mt-3 mb-4">Contact us</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="contact_us.html">FAQs</a>
+          </li>
+          <li>
+            <a href="#!">Help center</a>
+          </li>
+          <li>
+            <a href="contact_us.html">Partnerships</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+      <hr class="clearfix w-100 d-md-none">
+      <!--Grid column-->
+      <div class="col-md-2 mx-auto">
+        <!--Links-->
+        <h5 class="font-weight-bold mt-3 mb-4">Available on:</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Windows</a>
+          </li>
+          <li>
+            <a href="#!">Mac OS</a>
+          </li>
+          <li>
+            <a href="#!">Linux</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+      <hr class="clearfix w-100 d-md-none">
+      <!--Grid column-->
+      <div class="col-md-2 mx-auto">
+        <!--Links-->
+        <h5 class="font-weight-bold mt-3 mb-4">Get now on:</h5>
+        <ul class="list-unstyled">
+          <li class = "google ml-0">
+            <a href="#!"><img src = "googlelogo.png" alt="Get it on Google Play"></a>
+          </li>
+          <li class = "apple mt-0">
+            <a href="#!"><img src = "applelogo.png" alt="Download on the App Store"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!--Copyright-->
+  <div class="footer-copyright text-center">© 2020 Copyright:
+    <a href="index.html"> ProtecPass.com</a>
+  </div>
+</footer>
+
+</body>
+</html>

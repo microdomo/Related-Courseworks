@@ -1,0 +1,100 @@
+Logo                   Sign up/Log in button
+Nav Bar [Bootstrap]:
+Home Page, Subscription, Help, Contact Us
+
+Home Page:
+
+Tagline : [With ProtecPass, Passwords are now past words]
+
+How it works?
+We save your passwords in a password vault that only YOU have access to.
+Forgot your password? Just open the application and you have it. Or even simpler,
+let us autofill it for you with just a simple click on a checkbox to enable this.
+
+Subscriptions:
+FREE Plan
+- 7 days trial for premium account
+- Save up to 75 passwords
+- 1 device
+- Autofill online payments and forms
+- Two-Factor Authentication
+- Biometric Authentication
+
+Button - download now 
+
+Premium Plan
+- All free features included
+- Unlimited passwords
+- Unlimited devices
+- Sync across devices
+- Select a list of trusted contacts
+- Able to share passwords with trusted contacts
+
+Monthly @ $4.99/month OR annually @ $44.99/year (SAVE UP TO 25% @ 3.75/month)
+
+Features:
+List of features [Need to describe each feature and icons]:
+
+Free features:
+Secure your data
+- AES 256 encryption
+Most secured industry standard for data security. Supports the 
+largest bit size and is unbreakable by current computer's capability.
+- 2 Factor-Authentication
+Receive a One-Time Password each time you log in. Be alerted
+when someone tries to login and change your password in time.
+- Biometric Authentication
+Choose to lock your account with additional security like 
+fingerprint scanning, facial recognition or voice recognition.
+- Autofill [maybe add in autosave + autosave description]
+Each passwords have a checkbox for you to choose if you want the password
+to be autofilled in the future when signing in to the account.
+
+Features unlocked with premium:
+More security 
+- Alert for data breaches
+Get alert for any breach and alert remains till password gets changed by user.
+- Monitoring Dark Web
+Looking into the dark web 24/7 to help search for your data. If data is found being sold, you will be alerted instantly.
+
+Others:
+- Sharing passwords
+Have shared account with friends or family like Spotify or Netflix?
+Easily share the passwords with them with our share function
+- Trusted contacts
+Having to select the same contacts over and over when sharing password?
+Save time by selecting trusted contacts and sharing the password with them
+at once by clicking on "trusted contacts" instead of all the different people
+- Syncing
+Using ProtecPass on multiple devices? Our sync function will ensure that
+passwords and credentials stay update on all your devices
+
+Contact Us:
+FAQs [Accordion]
+- What is a password manager?
+Answer: A password manager, just like its name, manages your password for you. It is a software application
+        that helps manage credentials online and in turn give you greater convenience online.
+- Can Protec Pass see our passwords saved?
+Answer: No. Protec Pass is designed such that your data are encrypted and decrypted on your own end. They can
+        only be access using a passsword that only you know about. Hence, Protec Pass will not be able to see your passwords.
+- What is a password generator?
+Answer: A password generator helps generate random passwords for you. These passwords contains alphabets, numbers and special
+        characters which makes them stronger and safer.
+Link to FAQ page for other questions[Link/Button]
+
+Email : ProtecPass@example.com
+Contact Number: +65 91234567
+
+A form section to submit enquiries or other FAQ qns. [Requirement to use Bootstrap form]
+
+Tools: [Use javascript]
+- Password generator
+- Username generator [NOT DONE]
+
+
+Footer:
+ProtecPass        Tools                   Contact Us         Get now on:                      Also available on:
+- About Us        - Password generator    - FAQs             - app store logo                 -Windows
+- Features        - Username generator    - Help Center      - get it on google play logo     -Mac OS 
+- Subscriptions                           - Partnership                                       -Linux
+
