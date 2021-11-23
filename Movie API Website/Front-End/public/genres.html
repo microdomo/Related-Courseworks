@@ -1,0 +1,237 @@
+<!--Class: DISM/FT/2B/21
+    Admission Number: p2026073
+    Tan Ying Xuan Shermaine-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SP Movies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <base href = "/"><link href="css/layout.css" rel="stylesheet", text>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a href="/">
+                            <img src="Images/SPmovies.png" alt="SP Movies">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="/">Home</a></li>
+                                <li><a style = "color: #b7b7b7;">Genres <span class="fa fa-angle-down" style = "padding-left: 3px; color: #b7b7b7;"></span></a>
+                                    <ul class="dropdown" id = "genres-dropdown">
+                                    </ul>
+                                </li>
+                                <li><a href="/movie/">Movies</a></li>
+                                <li><a href="/login/" id = "login">Login</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Search -->
+                <div class="col-lg-4" id = "Search">
+                    <form id = "search-form">
+                        <div class = "search-container">
+                            <input type="text" class= "searchInput" id ="searchInput" placeholder="Search.." name="search">
+                            <button type="submit" id ="searchButton"><i class="fa fa-search"></i></button>
+                        </div>
+                        <div class = "searchgroup">
+                            <select name="searchgroup" id="searchgroup" style= "height:31px">
+                                <option value="title">Title</option>
+                                <option value="genre">Genre</option>
+                            </select>
+                        </div>
+                        <div class = "logout" id = "logout">                     
+                        </div>
+                    </form>
+                </div>
+                <!-- End of Search-->
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="/"><i class="fa fa-home"></i> Home</a>
+                        <a style = "color: #b7b7b7;">Genres</a>
+                        <span id="genrespan"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+    <!-- Search Result-->
+    <div class="container ">
+        <div class="row" id = "moviescards">
+        </div>
+    </div>
+    
+    <script>
+        // ==============================================
+        //                  Genres Navbar
+        // ==============================================
+        const loggedInAs = localStorage.getItem("loggedInAs");
+        const baseUrl = "http://localhost:3000";
+        axios.get(`${baseUrl}/genre/`)
+            .then((response) => {
+                const genres = response.data
+                genres.every((genre) => {
+                    for (var i = 0; i < genres.length; i++) {
+                        const genresHtml = `
+                            <li class="indivgenre" id ="indivgenre">
+                                <a onclick = "genreSelected('${genres[i].genreid}')"href="/genre/" id ="genrename">${genres[i].genre}</a>
+                            </li>
+                        `;
+                        $("#genres-dropdown").append(genresHtml);
+                    }
+                    if (loggedInAs == "Admin") {
+                        const addgenrebuttonHtml = `
+                        <li><a href = "http://localhost:3001/addGenres.html" style = "font-size: 18px;">Add Genre</a></li>
+                        `
+                        $("#genres-dropdown").append(addgenrebuttonHtml)
+                    }
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        function genreSelected (genre) {
+            localStorage.setItem('genre', genre)
+        }
+
+        var genre = localStorage.getItem('genre')
+
+        axios.get(`${baseUrl}/genre/${genre}`)
+            .then((response) => {
+                const movies = response.data
+                movies.every((movie) => {
+                    for (var i = 0; i < movies.length; i++) {
+                        const moviesHtml = `
+                        <div class="col-lg-4 " style="width: 18rem;">
+                            <div class="card border-0" style="margin-bottom: 10px; margin-top:10px; background-color: #0a0909; color: #b7b7b7;">
+                                <img class="card-img-top" src="Images/${movies[i].image}" alt="${movies[i].title}">
+                                <div class="card-body">
+                                    <p class="card-text"> <a href="/movie/${movies[i].movieid}/">${movies[i].title}</a>
+                                        <br>Duration: ${movies[i].time}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        `;
+                        $("#moviescards").append(moviesHtml);
+                    }
+                    const genrespan = `
+                        ${movies[0].genre}
+                    `;
+                    $("#genrespan").append(genrespan);
+                });
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        $(document).ready(function () {
+
+            $('#searchButton').click(function () {
+
+                var searchInput = $('#searchInput').val();
+
+                var searchgroup = $('#searchgroup').val();
+
+                if (searchInput == '') {
+                    searchInput = "empty";
+                }
+
+                if (searchInput == "empty") {
+                    alert('Please input something to search for');
+                    return false;
+                }
+
+                dataPack2Obj = {
+                    "searchgroup": searchgroup,
+                    "searchInput": searchInput,
+                }
+
+                var dataPack2 = JSON.stringify(dataPack2Obj);
+                console.log("----------------compiled data----------------")
+
+                // Call the web service endpoint
+                $.ajax({
+                    // headers: { 'authorization': 'Bearer ' + tmpToken }, 
+                    url: 'http://localhost:3000/search-movie/' + searchInput + "/" + searchgroup + "/",
+                    type: 'GET',
+                    data: dataPack2,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'json',
+                    success: function (responseData, textStatus, xhr) {
+                        console.log("-------- response data --------")
+                        console.log(responseData);
+
+                        if (responseData != null) {
+
+                            localStorage.setItem('movieInfo', JSON.stringify(responseData))
+                            window.location.assign("http://localhost:3001/searched.html");
+
+                        }
+                        else {
+                            console.log("Error");
+                        }
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        console.log('Error in Operation');
+                    }
+
+                });
+                return false;
+            });
+            //-----------------------------------------------------------
+            // Token
+            //-----------------------------------------------------------
+            const token = localStorage.getItem("token");
+
+            if (token !== null) {
+                const Logout = `
+                <button type ="button" id = "logout-button" class="btn">
+                    <span style = "color: white;"class="fa fa-sign-out"></span>
+                </button>
+                `
+                $("#logout").append(Logout);
+                document.getElementById("login").className = "isDisabled";
+
+                $('#logout').click(function () {
+                    window.localStorage.clear();
+                    window.location.assign("http://localhost:3001");
+                });
+            }
+        });
+
+    </script>
+</body>
+</html>

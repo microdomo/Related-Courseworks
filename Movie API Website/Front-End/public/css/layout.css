@@ -1,0 +1,567 @@
+/* Class: DISM/FT/2B/21
+	Admission Number: p2026073
+	Name: Tan Ying Xuan Shermaine*/
+
+@charset "utf-8";
+
+/* Base Code */
+html, body {
+	height: 100%;
+	font-family: "Mulish", sans-serif;
+	-webkit-font-smoothing: antialiased;
+    background-color: rgb(20, 20, 20);
+	/* background: rgb(9, 10, 20); */
+}
+
+img {
+	max-width: 100%;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h5 {
+	font-size: 18px;
+	color: #b7b7b7;
+}
+
+/* Header */
+.header {
+	background: #0a0909;
+}
+
+.header__menu {
+	text-align: center;
+    padding-top: 15px;
+    font-family: "Cambria";
+}
+
+.header__menu ul li {
+	list-style: none;
+	display: inline-block;
+	position: relative;
+	margin-right: 16px;
+    font-size: 125%;
+}
+
+.header__menu ul li.active{
+	background-color: #e53637;
+	color: #ffffff;
+}
+
+.header__menu ul li:hover a {
+	color: #ffffff;
+}
+
+.header__menu ul li:hover .dropdown {
+	top: 62px;
+	opacity: 1;
+	visibility: visible;
+}
+
+.header__menu ul li:hover .dropdown li a {
+	background: transparent;
+}
+
+.header__menu ul li:last-child {
+	margin-right: 0;
+}
+
+.header__menu ul li .dropdown {
+	position: absolute;
+	left: 0;
+	top: 82px;
+	width: 150px;
+	background: #ffffff;
+	text-align: left;
+	padding: 5px 0;
+	z-index: 9;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+}
+
+.header__menu ul li .dropdown li {
+	display: block;
+	margin-right: 0;
+}
+
+.header__menu ul li .dropdown li a {
+	font-size: 14px;
+	color: #111111;
+	font-weight: 500;
+	padding: 5px 20px;
+}
+
+.header__menu ul li a {
+	color: #b7b7b7;
+	display: block;
+	font-weight: 700;
+	-webkit-transition: all, 0.5s;
+	-o-transition: all, 0.5s;
+	transition: all, 0.5s;
+	padding: 20px;
+}
+
+.header__menu ul li a span {
+	position: relative;
+	top: 2px;
+}
+
+.isDisabled {
+	color: currentColor;
+	text-decoration: none;
+	pointer-events: none;
+}
+
+/* Search Function */
+.search-container {
+    float: right;
+}
+
+.searchInput {
+	width: 70%;
+}
+
+.search-container input[type=text] {
+    font-size: 17px;
+}
+.search-container button {
+    padding: 3px 6px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background: #ffffff;
+}
+
+.searchgroup {
+    margin-top: 37px;
+    padding-left: 20px;
+}
+
+.logout button {
+	float: right;
+	font-size: 32px;
+	padding: 1px 0px 0px 5px;
+    border: none;
+    cursor: pointer;
+	margin-top: -40px;
+}
+
+/* Carousel */
+.carousel {
+    margin-top: 50px;
+    margin-left: 400px;
+    width: 58%;
+}
+
+.carousel > .carousel-item > .blackwidow {
+    width: 100%;
+    height: 200%
+}
+
+.carousel > .carousel-item > .godzilla {
+    width: 100%;
+    height: 200%
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+/* Login Page */
+.login {
+	padding-top: 130px;
+	padding-bottom: 120px;
+}
+
+.login__form {
+	position: relative;
+	padding-left: 144px;
+}
+
+.login__form:after {
+	position: absolute;
+	right: -14px;
+	top: -40px;
+	height: 330px;
+	width: 1px;
+	background: rgba(255, 255, 255, 0.2);
+	content: "";
+}
+
+.login__form h3 {
+	color: #ffffff;
+	font-weight: 700;
+	font-family: "Oswald", sans-serif;
+	margin-bottom: 30px;
+}
+
+.login__form form .form-group {
+	position: relative;
+	width: 370px;
+	margin-bottom: 20px;
+}
+
+.login__form form .form-group:before {
+	position: absolute;
+	left: 50px;
+	top: 10px;
+	height: 30px;
+	width: 1px;
+	background: #b7b7b7;
+	content: "";
+}
+
+.login__form form .form-group input {
+	height: 50px;
+	width: 100%;
+	font-size: 15px;
+	color: black;
+	background: #ffffff;
+	border: none;
+	padding-left: 76px;
+}
+
+.login__form form .form-group input::-webkit-input-placeholder {
+	color: #b7b7b7;
+}
+
+.login__form form .form-group input::-moz-placeholder {
+	color: #b7b7b7;
+}
+
+.login__form form .form-group input:-ms-input-placeholder {
+	color: #b7b7b7;
+}
+
+.login__form form .form-group input::-ms-input-placeholder {
+	color: #b7b7b7;
+}
+
+.login__form form .form-group input::placeholder {
+	color: #b7b7b7;
+}
+
+.login__form form .form-group span {
+	color: #b7b7b7;
+	font-size: 20px;
+	position: absolute;
+	left: 18px;
+	top: 13px;
+}
+
+.login__form .site-btn {
+	border: 0;
+	padding: 12px 40px;
+	background: #e53637;
+	color: #ffffff;
+}
+
+.login__form .forget_pass {
+	font-size: 16px;
+	color: #ffffff;
+	display: inline-block;
+	position: absolute;
+	right: 35px;
+	bottom: 12px;
+}
+
+.login__register {
+	padding-left: 30px;
+}
+
+.login__register h3 {
+	color: #ffffff;
+	font-weight: 700;
+	font-family: "Oswald", sans-serif;
+	margin-bottom: 38px;
+}
+
+.login__register .primary-btn {
+	border: 0;
+	background: #e53637;
+	padding: 12px 40px;
+	color: #ffffff;
+}
+
+/* Breadcrumb */
+.breadcrumb-option {
+	padding-top: 35px;
+}
+
+.breadcrumb__links a {
+	font-size: 15px;
+	color: #ffffff;
+	margin-right: 18px;
+	display: inline-block;
+	position: relative;
+}
+
+.breadcrumb__links a i {
+	margin-right: 5px;
+	color: #e53637;
+}
+
+.breadcrumb__links a:after {
+	position: absolute;
+	right: -14px;
+	top: 0;
+	content: "";
+	font-family: "FontAwesome";
+}
+
+.breadcrumb__links span {
+	font-size: 15px;
+	color: #b7b7b7;
+	display: inline-block;
+}
+
+/* Movies Listings */
+.card img {
+	background-image: cover;
+}
+
+.card-text a {
+	color: #ffffff;
+}
+
+.description {
+	text-align: justify;
+}
+
+.checked {
+	color: orange;
+}
+
+
+.posted_on {
+	float: right;
+}
+
+/* Full-width input fields */
+.modal input[type=text], .modal input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+  
+/* Add a background color when the inputs get focus */
+.modal input[type=text]:focus, .modal input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+  
+/* Set a style for all buttons */
+.modal button:hover { 
+	opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+	margin: 8px 0;
+	padding: 14px;
+	background-color: #f44336;
+	color: white;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.submitbtn {
+	margin: 8px 0;
+	padding: 14px ;
+	background-color: #04AA6D;
+	color: white;
+	border: none;
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .submitbtn {
+	width: 49.6%;
+}
+
+/* Add padding to container elements */
+.modal .container {
+	padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	background-color: #474e5d;
+	padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 40%; /* Could be more or less, depending on screen size */
+	height: 60%;
+}
+
+/* Style the horizontal ruler */
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+	position: absolute;
+	right: 35px;
+	top: 15px;
+	font-size: 40px;
+	font-weight: bold;
+	color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+	color: #f44336;
+	cursor: pointer;
+}
+
+.clearfix {
+	padding-top: 25px;
+}
+/* Clear floats */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.modal-content .row input[type=text], .row textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: vertical;
+}
+  
+.modal-content .row label {
+	padding: 12px 0px 12px 0;
+	display: inline-block;
+}
+
+.radio-inline {
+	margin: 0 10px 0 10px;}
+
+.col-25 {
+	float: left;
+	width: 20%;
+}
+  
+.col-75 {
+	float: left;
+	width: 80%;
+	margin-top: 6px;
+	padding-right: 15px;
+}
+  
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.addReviews-btn {
+	border: 0;
+	padding: 6px 10px;
+	float: right;
+	margin-right: -60px;
+	margin-top: 45px;
+	background: #e53637;
+	color: #ffffff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.addReviews-btn a {
+	color: #ffffff;
+}
+
+.form-control-label {
+	background-color: #22262b;
+	color: #ffffff;
+}
+
+/* Add Movies Form*/
+.col-lg-2 {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+  
+.col-lg-10 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+
+.multipleGenres {
+	border: 0;
+	border-radius: 3px;
+	margin-left: 20px;
+	padding: 6px 10px;
+	background: #e53637;
+	color: #ffffff;
+}
+
+.addreviews .isDisabled {
+	border: 0;
+	padding: 6px 10px;
+	float: right;
+	margin-right: -60px;
+	margin-top: 45px;
+	background: #e53637;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.deleteMovies-btn {
+	border: 0;
+	padding: 6px 10px;
+	background: #e53637;
+	color: #ffffff;
+	text-decoration: none;
+	margin-right: 10px;
+}
+.deleteMovies-btn a {
+	color: #ffffff;
+}
+
+.addMovies-btn {
+	border: 0;
+	padding: 6px 10px;
+	background: #e53637;
+	color: #ffffff;
+	text-decoration: none;
+}
+.addMovies-btn a {
+	color: #ffffff;
+}
